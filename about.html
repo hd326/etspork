@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="jquery-3.3.1.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+    <div id="side_nav">
+
+        <nav>
+            <ul>
+                <ul>
+                <li><a href="index.html">HOME</a></li>
+                <hr>
+                <li><a href="purchase.html">PURCHASE</a></li>
+                <hr>
+                <li><a href="about.html">ABOUT</a></li>
+                <hr>
+                <li><a href="contact.html">CONTACT</a></li>
+                <hr>
+            </ul>
+            </ul>
+        </nav>
+
+        <div id="side_nav_transparent"></div>
+    </div>
+
+    <div id="shopping_cart">
+
+        <div id="shopping_title_close">
+            <p>SHOPPING CART</p>
+            <p id>CLOSE</p>
+            <p id="close"></p>
+        </div>
+
+        <div id="shopping_cart_item">
+            <div class="shopping_cart_img"><img src="image/get_et_spork2.jpg"></div>
+            <div class="shopping_cart_desc">
+                <p>ET SPORK - PREORDER - 31%</p>
+                <p><span>Finish:</span> <span>Mirror</span></p>
+                <div class="shopping_cart_number">
+                    <input type="text" value="1"><span>x</span><span>$9.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="shopping_cart_item">
+            <div class="shopping_cart_img"><img src="image/get_et_spork2.jpg"></div>
+            <div class="shopping_cart_desc">
+                <p>ET SPORK - PREORDER - 31%</p>
+                <p><span>Finish:</span> <span>Mirror</span></p>
+                <div class="shopping_cart_number">
+                    <input type="text" value="1"><span>x</span><span>$9.00</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--
+        <div id="shopping_cart_item">
+
+            <div class="shopping_cart_img"><img src="image/get%20et%20spork%202.jpg"></div>
+
+            <div class="shopping_cart_desc">
+                <p>ET SPORK - PREORDER - 31%</p>
+                <p><span>Finish:</span> <span>Mirror</span></p>
+                <div class="shopping_cart_number">
+                    <input type="text" value="1"><span>x</span><span>$9.00</span>
+                </div>
+            </div>
+
+        </div>
+        -->
+
+        <div id="shopping_cart_instructions">
+            <p>Special instructions for seller</p>
+            <textarea></textarea>
+        </div>
+        <hr>
+
+        <div id="shopping_cart_price">
+            <p>SUBTOTAL:</p>
+            <p>$62.16</p>
+        </div>
+        <hr>
+
+
+        <div class="shopping_cart_checkout"><a href="cart.html">VIEW CART</a></div>
+        <div class="shopping_cart_checkout"><a href="checkout.html">CHECKOUT</a>
+        </div>
+
+    </div>
+
+
+    <header>
+
+        <div id="header_c">
+
+            <div id="header_logo">
+                <img src="image/et_spork.png">
+                <h1>ET Spork</h1>
+            </div>
+
+            <nav id="others">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="purchase.html">PURCHASE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div id="header_cart_icon">
+
+                <div id="header_cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart_number"><span id="number">1</span></span>
+                </div>
+
+                <div id="icon">
+                    <div id="hamburger"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            $(function(){
+    
+    $('#icon').on('click', function(){
+        $('#side_nav nav').toggleClass('side_nav_width');
+        $('#side_nav_transparent').show();
+    });
+                
+    $('#header_cart').on('click', function(){
+        $('#shopping_cart').toggleClass('shopping_cart_width');
+        $('#side_nav_transparent').show();
+    });
+    
+    function closeSideNav(){
+        var side = document.querySelector('#side_nav nav');
+        var sideNavMargin = window.getComputedStyle(side).getPropertyValue('margin-left');
+        if (sideNavMargin === '0px') {
+            $('#side_nav nav').toggleClass('side_nav_width');
+            $('#side_nav_transparent').hide();
+    }
+}
+    function closeShoppingCart(){
+        var shoppingCart = document.querySelector('#shopping_cart');
+        var shoppingCartMargin = window.getComputedStyle(shoppingCart).getPropertyValue('margin-right');
+        if (shoppingCartMargin === '0px') {
+            $('#shopping_cart').toggleClass('shopping_cart_width');
+            $('#side_nav_transparent').hide();
+    }
+}
+    
+        $('#side_nav_transparent').click(function(){
+           closeSideNav(); 
+        });
+                
+        $('#side_nav_transparent').click(function(){
+           closeShoppingCart(); 
+        });
+                
+}); 
+            
+</script>
+
+    </header>
+
+    
+    <div class="title" id="about_title">
+    
+        <h1>ABOUT</h1>
+        <div id="about_site_map">
+            <i class="fas fa-home"></i> <span>Home</span> / <span>About</span>
+        </div>
+    
+    </div>
+    
+    <footer>
+        <div id="footer_c">
+            <div id="footer_social">
+            <h1>Et Spork</h1>
+                <div id="footer_social_h">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus-g"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            
+            <div id="footer_links">
+                <span>QUICK LINKS</span>
+                <p><a href="home.html">Home</a></p>
+                <p><a href="purchase.html">Purchase</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+        </div>
+        <div id="footer_copyright">&copy; 2018 Jays Design</div>
+    </footer>
+
+</body>
+</html>
