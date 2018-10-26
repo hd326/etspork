@@ -1427,7 +1427,8 @@ header #header_cart #cart_number {
 
 header #header_cart #number {
     position: absolute;
-    color: blue;
+    left :0;
+    right: 0;
 }
 
 /*cart media query*/
